@@ -126,4 +126,4 @@ def calculate_return(start_date, end_date, price_df):
     :return:returns a dataframe returns between the start and end date for each stock
     """
     return [(x / y) - 1 for x, y in
-            zip(price_df[price_df.index == end_date].values, data[data.index == start_date].values)]
+            zip(price_df[price_df.index == end_date].values, price_df[price_df.index == start_date].values)]
